@@ -1,10 +1,12 @@
 body
 {
     background-color: #EAF6F6;
+    margin: 0%;
 }
 h1
 {
     color: #66BFBF;
+    margin-top: 0%;
 }
 h3
 {
@@ -16,4 +18,32 @@ hr
     border-color: green;
     border-width: 5px;
     width: 90%;
+}
+div
+{
+    background-color: greenyellow;
+}
+.top-container
+{
+    background-color: #EAF9F5;
+    width: 200px;
+    height: 200px;
+    border: solid 10px;
+    padding: 20px;
+}
+.middle-container
+{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border: solid 20px;
+    margin-left: 260px;
+}
+.bottom-container
+{
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    border: solid 10px;
+    margin-left: 500px;
 }
