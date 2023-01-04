@@ -1,0 +1,83 @@
+<html>
+    <head>
+    <title> username </title>
+    </head>
+    <body>
+    <script>
+        function myFun(){
+        var correct_way=/^[A-Za-z]+$/;
+        var a=document.getElementById("User_Name").value;
+       if(a==""){
+       document.getElementById("Message").innerHTML="**please fill username";
+       return false;
+       }
+       if(a.length<3){
+       document.getElementById("Message").innerHTML="**username must be 3 character";
+       return false;
+       }
+       if(a.length>20){
+       document.getElementById("Message").innerHTML="**username must not be above 20 character";
+       return false;
+       }
+       if(a.match(correct_way))
+       true;
+       else{
+       document.getElementById("Message").innerHTML="**only alphabets are allowed";
+       return false;
+       }
+       var a=document.getElementById("mobilenumber").value;
+       if(a==""){
+       document.getElementById("message").innerHTML="**please enter number";
+       return false;
+       }
+      if(isNaN(a)){
+      document.getElementById("message").innerHTML="** enter only numeric value";
+      return false;
+      }
+      if(a.length<10){
+      document.getElementById("message").innerHTML="**number must be 10 character";
+      return false;
+      }
+      if(a.length>10){
+      document.getElementById("message").innerHTML="**number must be 10 character";
+      return false;
+      }
+      if(a.charAt(0)!=9 && a.charAt(0)!=8 && a.charAt(0)!=7){
+      document.getElementById("message").innerHTML="**number must begin from 9,8 and 7 value";
+      return false;
+      }
+      var a=document.getElementById("passwords").value;
+      var b=document.getElementById("passwordss").value;
+      if(a==""){
+      document.getElementById("messages").innerHTML="**please fill password";
+      return false;
+      }
+      if(a.length<5){
+      document.getElementById("messages").innerHTML="**password must be 5 character";
+      return false;
+      }
+      if(a.length>15){ 
+      document.getElementById("messages").innerHTML="**password must not be above 15 character";
+       return false;
+      }
+      if(a!=b){ 
+      document.getElementById("messages").innerHTML="**password is incorrect";
+      return false;  
+    }
+    } 
+    </script>
+    <form onsubmit="return myFun()">
+    UserName:<input type="text" id="User_Name" value="">
+    <span id="Message"> </span> <br><br>
+    Mobile no:<input type="text" id="mobilenumber" value="">
+    <span id="message" style="color:red"> </span> <br><br>
+    Passwords:<input type="password" id="passwords" value="">
+    <span id="messages"> </span> &nbsp &nbsp
+    confirm Password:<input type="password" id="passwordss" value="">
+    <span id="messages"> </span> <br><br>
+    <input type="submit" value="Submit"></input>
+    </form>
+    </body>
+    </html> 
+    
+    
