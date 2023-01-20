@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>typeWriter</title>
+        <style>
+            button
+            {
+                background-color: aqua;
+                padding: 20px;
+                margin-left: 600px;
+                margin-top: 25px;
+            }
+            .bitmap1 {
+                float: left;
+                width: 33.33%;
+                padding: 20px;
+                margin-left: 90px;
+                background-color: #ffa;
+                border: 20px solid green;
+            }
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            h1
+            {
+                color: red;
+            }
+            p
+            {
+                margin-left: 565px;
+            }
+
+        </style>
+    </head>
+<body>
+
+<marquee><h1>Typewriter</h1></marquee>
+
+<div class="row">
+<div class="bitmap1">
+    <img id="img1" src="img.jpg" width="400">
+</div>
+
+<div class="bitmap1">
+    <img id="img1" src="img2.jpg" width="288">
+</div>
+</div>
+
+<button onclick="typeWriter()">Click Here</button>
+
+<b></b><p id="demo"></p></b>
+
+<script>
+var i=0;
+var txt = "My name is Shashank Jain.";
+var speed = 100;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter,speed);
+  }
+}
+</script>
+
+</body>
+</html>
