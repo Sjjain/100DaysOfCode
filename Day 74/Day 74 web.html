@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div>
+        <h1 id="p1">This is a paragraph.</h1>
+        <h1 id="p2">This is another paragraph.</h1>
+    </div>
+    
+    <button onclick="myFunction2()">Remove Element</button>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Hello World!</p>
+
+<p>Hello Norway!</p>
+
+<p>Click the button to change the color of all p elements.</p>
+
+<button onclick="myFunction1()">Try it</button>
+
+<script>
+function myFunction1() {
+  const myCollection = document.getElementsByTagName("p");
+  for (let i = 0; i < myCollection.length; i++) {
+    myCollection[i].style.color = "red";
+  }
+}
+function myFunction2() {
+document.getElementById("p1").remove();
+}
+
+</script>
+
+</body>
+</html>
