@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class Inheritance</h2>
+
+<p id="demo"></p>
+
+<script>
+class College {
+  constructor(Cname) {
+    this.collgename = Cname;
+  }
+  present() {
+    return 'College name is  ' + this.collgename;
+  }
+}
+
+class Principal extends College {
+  constructor(Cname, Pname) {
+    super(Cname);
+    this.Principalname = Pname;
+  }
+  show() {
+    return this.present() + ' ,  The Chancellor of this college is ' + this.Principalname;
+  }
+}
+
+let myCollege = new Principal("VIT", "Dr. G. Viswanathan");
+document.getElementById("demo").innerHTML = myCollege.show();
+</script>
+
+</body>
+</html>
