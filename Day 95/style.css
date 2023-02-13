@@ -1,0 +1,152 @@
+nav{
+  position: fixed;
+  background: black;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1;
+}
+nav .menu{
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.menu .logo a{
+  text-decoration: none;
+  color: white;
+  font-size: 35px;
+  font-weight: 600;
+}
+.menu ul{
+  display: inline-flex;
+}
+.menu ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+.menu ul li a:hover{
+  background: white;
+  color: black;
+}
+.img{
+  background: url('img1.webp');
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.img::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.center{
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: left;
+}
+.right1{
+  position: absolute;
+  top: 32%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: right;
+}
+.right2{
+  position: absolute;
+  top: 76%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: right;
+}
+#pro{
+  font-size: 40px;
+  color: Salmon;
+  font-weight: bold;
+  font-family: 'Lobster', cursive;
+  margin-left: 110px;
+}
+.center .title{
+  color: white;
+  font-size: 55px;
+  font-weight: 600;
+}
+.center .sub_title{
+  color: white;
+  font-size: 52px;
+  font-weight: 600;
+}
+.center .btns{
+  margin-top: 75px;
+  margin-left: 200px;
+}
+body{
+  border-style: solid; 
+  border-color: black; 
+}
+.center .btns button{
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.center .btns button:first-child{
+  color: white;
+  background: none;
+}
+.btns button:first-child:hover{
+  background: white;
+}
+.center .btns button:last-child{
+  background: white;
+}
+.fa-facebook
+{
+  margin-top: 20px;
+  margin-left: 245px;
+}
+.fa-instagram
+{
+  margin-left: 20px;
+}
+.fa-twitter
+{
+  margin-left: 20px;
+}
+.fa-whatsapp
+{
+  margin-left: 20px;
+}
+.fa-phone
+{
+  margin-left: 20px;
+}
+a{
+  margin-top: 20px;
+  margin-left: 10px;
+}
