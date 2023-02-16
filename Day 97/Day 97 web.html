@@ -1,0 +1,146 @@
+
+
+<html>
+    <head>
+    <title> Responsive form </title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <script>
+        function myFun(){
+        var correct_way=/^[A-Z a-z]+$/;
+        var letterNumber = /^[0-9a-zA-Z]+$/;
+
+        var a=document.getElementById("User_Name").value;
+       if(a==""){
+       document.getElementById("Message").innerHTML="**please fill username";
+       return false;
+       }
+       if(a.length<3){
+       document.getElementById("Message").innerHTML="**username must be 3 character";
+       return false;
+       }
+       if(a.length>20){
+       document.getElementById("Message").innerHTML="**username must not be above 20 character";
+       return false;
+       }
+       if(a.match(correct_way))
+       true;
+       else{
+       document.getElementById("Message").innerHTML="**only alphabets are allowed";
+       return false;
+       }
+       if( a.charAt(0).toUpperCase())
+       true;
+       else{
+       document.getElementById("Message").innerHTML="**First letter must be Capital";
+       return false;
+       }
+       
+       var a=document.getElementById("mobilenumber").value;
+       if(a==""){
+       document.getElementById("message").innerHTML="**please enter number";
+       return false;
+       }
+      if(isNaN(a)){
+      document.getElementById("message").innerHTML="** enter only numeric value";
+      return false;
+      }
+      if(a.length<10){
+      document.getElementById("message").innerHTML="**number must be 10 character";
+      return false;
+      }
+      if(a.length>10){
+      document.getElementById("message").innerHTML="**number must be 10 character";
+      return false;
+      }
+      if(a.charAt(0)!=9 && a.charAt(0)!=8 && a.charAt(0)!=7){
+      document.getElementById("message").innerHTML="**number must begin from 9,8 and 7 value";
+      return false;
+      }
+
+      var a=document.getElementById("Email").value;
+      if(a==""){
+      document.getElementById("messages").innerHTML="**please fill Email id";
+      return false;
+      }
+      if(a.indexOf('@')<=0){
+      document.getElementById("messages").innerHTML="**invalid @ position";
+      return false;
+      }
+      if((a.charAt(a.length-4)!='.' && a.charAt(a.length-3)!='.')){
+      document.getElementById("messages").innerHTML="**invalid . position";
+      return false;
+      }
+
+      var a=document.getElementById("registration").value;
+       if(a==""){
+       document.getElementById("messagess").innerHTML="**please fill username";
+       return false;
+       }
+       if(a.length<3){
+       document.getElementById("messagess").innerHTML="**username must be 3 character";
+       return false;
+       }
+       if(a.length>20){
+       document.getElementById("messagess").innerHTML="**username must not be above 20 character";
+       return false;
+       }
+       if(a.match(letterNumber))
+       true;
+       else{
+       document.getElementById("messagess").innerHTML="**only alphabets and numeric are allowed";
+       return false;
+       }
+
+       var a=document.getElementById("address").value;
+       if(a==""){
+       document.getElementById("messagesss").innerHTML="**please fill username";
+       return false;
+       }
+       if(a.length<10){
+       document.getElementById("messagesss").innerHTML="**username must be 10 character";
+       return false;
+       }
+       if(a.length>20){
+       document.getElementById("messagesss").innerHTML="**username must not be above 20 character";
+       return false;
+       }
+       if(a.match(correct_way))
+       true;
+       else{
+       document.getElementById("messagesss").innerHTML="**only alphabets and numeric are allowed";
+       return false;
+       }
+       
+    } 
+    function myFunction() {
+        document.getElementById("myForm").reset();
+        }
+    </script>
+    <center>
+    <div class="demo">
+    <br>
+    <body>
+        <h2><b>Registration Form</b></h2>
+        <br>
+    <form action="new.html" id="myForm" method=post onsubmit="return myFun()">
+    UserName:<input type="text" id="User_Name" value="">
+    <span id="Message"> </span> <br><br>
+    Mobile no:<input type="text" id="mobilenumber" value="">
+    <span id="message" style="color:red"> </span> <br><br>
+    Registration no:<input type="text" id="registration" value="">
+    <span id="messagess"> </span> <br><br>
+    Email Id:<input type="text" id="Email" value="">
+    <span id="messages"> </span> <br><br>
+    Address:<input type="text" id="address" value="">
+    <span id="messagesss"> </span> <br><br>
+    <input type="submit" value="Submit"></input>
+    <input type="button" onclick="myFunction()" value="Reset">
+    </form>
+    </body>
+    </div>
+    </center>
+    </html> 
+    
+    
